@@ -14,7 +14,7 @@ const AttendanceRecord = sequelize.define(
       allowNull: false,
     },
     status: {
-      type: DataTypes.ENUM("Present", "Absent"),
+      type: DataTypes.ENUM("Presented", "Absent"),
       allowNull: false,
     },
     sessionId: {
