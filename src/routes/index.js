@@ -12,6 +12,8 @@ import commonRoutes from "../apps/common/common.routes.js";
 import reportRoutes from "../apps/reports/reports.routes.js";
 import teacherRoutes from "../apps/teachers/teacher.routes.js";
 import rbacRoutes from "../apps/rbac/rbac.routes.js";
+import aiChatRoutes from "../apps/aiChat/chat.routes.js";
+
 
 const router = express.Router();
 
@@ -28,5 +30,7 @@ router.use("/common", commonRoutes);
 router.use("/reports", reportRoutes);
 router.use("/teachers", teacherRoutes);
 router.use("/rbac", rbacRoutes);
+router.use("/chat", aiChatRoutes);
+
 
 export default router;

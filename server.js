@@ -1,4 +1,6 @@
+import "dotenv/config";
 import express from "express";
+
 import cors from "cors";
 import sequelize from "./src/config/db.js";
 import routes from "./src/routes/index.js";
@@ -35,8 +37,8 @@ const startServer = async () => {
 
     // Attempt sync but don't crash if it fails (fixes ER_TOO_MANY_KEYS issue)
     try {
-      await sequelize.sync();
-      console.log("Database synced");
+      // await sequelize.sync();
+      // console.log("Database synced");
     } catch (syncError) {
       console.error("Database sync warning (Server still running):", syncError.message);
     }
